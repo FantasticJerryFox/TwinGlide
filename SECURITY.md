@@ -25,8 +25,9 @@ mismatch. Nearby announcements are untrusted discovery hints.
 
 This is an alpha implementation, not an independently audited security product.
 Do not publish identity.pem, state.json, endpoint.json, access tokens or raw logs.
-Use GitHub private vulnerability reporting once the repository is published.
-Until that channel exists, contact the repository maintainer privately; do not
-place exploitable details or credentials in a public issue.
+Use [GitHub private vulnerability reporting](https://github.com/FantasticJerryFox/TwinGlide/security/advisories/new)
+to contact the maintainer. Do not place exploitable details or credentials in a
+public issue. / 请通过上述私密漏洞报告入口联系维护者，不要在公开 Issue 中提交
+凭据或可利用的漏洞细节。
 
 See docs/PROTOCOL.md for the trust model and docs/RELEASING.md for release checks.

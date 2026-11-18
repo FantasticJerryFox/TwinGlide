@@ -2,6 +2,29 @@
 
 This file records observed outcomes, not planned tests.
 
+## Public source and hosted builds, 2026-11-18
+
+- Published the independent public repository
+  [FantasticJerryFox/TwinGlide](https://github.com/FantasticJerryFox/TwinGlide),
+  with complete Chinese and English usage/build documentation. All 57 remote
+  source-file objects matched the reviewed local commit. Private profiles,
+  credentials, logs, downloaded engines and other applications were excluded.
+- [GitHub Actions run 44235363733](https://github.com/FantasticJerryFox/TwinGlide/actions/runs/44235363733)
+  passed for application commit `ec1e8f5308a133b67ff7eefcfdee660e8c3545cc`:
+  Windows x64, Intel macOS, ARM64 macOS and Linux. All four ran static analysis,
+  coordinator tests and source export; Mac/Linux also passed the race detector.
+  Windows and both Macs built native desktop packages, checked pinned engines,
+  and passed native helper self-tests. The Mac builds verified ad-hoc signatures.
+- Hosted build success does not establish clean-install permission flows or
+  physical mouse/audio behavior on Apple Silicon or two Windows computers.
+  Those hardware acceptance limits remain below. No binary assets were published
+  by the workflow; the public alpha release contains source and checksums only.
+- Secret scanning, push protection and private vulnerability reporting were
+  confirmed enabled. The publication did not launch or install TwinGlide, or
+  change the original daily-use sharing services.
+- The follow-up publication commit changes documentation only; it records the
+  successful application commit above without repeating the build matrix.
+
 ## Alpha.5 Windows native redesign, 2026-11-17
 
 - Replaced the Windows top navigation and independently spaced pages with a
@@ -206,8 +229,8 @@ logs and screenshots are excluded from source publication.
   computers. Physical mouse handoff in both source roles is covered above.
 - Fresh-install/uninstall behavior on clean systems, full OS reboot/wake,
   changed DHCP addresses and multiple-monitor edge cases.
-- Apple Silicon native runtime and GitHub-hosted CI execution. Build paths are
-  provided, but no successful run on those environments is claimed here.
+- Apple Silicon physical desktop/input/audio acceptance. Its native hosted build
+  and helper self-tests passed as recorded above; physical usage is not covered.
 - Public binary source-compliance bundle, Windows signing and macOS notarization.
 
 Windows UAC/login/lock-screen input and clipboard sharing remain outside this

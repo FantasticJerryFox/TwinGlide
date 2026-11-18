@@ -2,6 +2,10 @@
 
 Source publication and binary publication are separate deliverables.
 
+The public source repository is [FantasticJerryFox/TwinGlide](https://github.com/FantasticJerryFox/TwinGlide).
+Source preview releases contain source and checksums only. They do not imply
+that a signed or notarized prebuilt installer is available.
+
 ## Source
 
 Run tests and `scripts/export-source.py`. Review the allowlisted export, license
