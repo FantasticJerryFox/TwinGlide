@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <title>TwinGlide 双游 — two gliding arrows</title>
+  <rect width="1024" height="1024" rx="224" fill="#245bd6"/>
+  <g fill="none" stroke-width="76" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M240 360C360 220 490 220 620 360L700 440M700 310V440H570" stroke="#fff"/>
+    <path d="M784 664C664 804 534 804 404 664L324 584M324 714V584H454" stroke="#a9e8ff"/>
+  </g>
+</svg>

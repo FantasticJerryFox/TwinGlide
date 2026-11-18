@@ -1,0 +1,14 @@
+.work/
+dist/
+.test-data/
+engine/cache/
+engine/staged/
+*.pem
+*.key
+*.pfx
+*.p12
+endpoint.json
+state.json
+*.log
+.DS_Store
+__pycache__/

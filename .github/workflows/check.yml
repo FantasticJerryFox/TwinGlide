@@ -1,0 +1,28 @@
+name: Check and build
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [windows-latest, macos-15-intel, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.27.4'
+      - run: go vet ./...
+      - run: go test -v ./...
+      - if: runner.os != 'Windows'
+        run: go test -race ./...
+      - if: runner.os == 'Windows'
+        shell: pwsh
+        run: ./scripts/build-windows.ps1
+      - if: runner.os == 'macOS'
+        run: python3 scripts/build-mac.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/export-source.py
